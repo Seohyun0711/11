@@ -2,26 +2,12 @@
 
 int main(void)
 {
-    int i = 10;
-    char c = 'a';
+    int i = 300;  
 
-    int *iptr;
-    char *cptr;
+    int *pi = &i;
+    char *pc = (char *)&i;
 
-    iptr = &i;
-    cptr = &c;
-
-    int *iptr2;
-    iptr2 = iptr;
-
-    printf("i : %p\n%p (size:%zu)\n",
-           (void *)iptr, (void *)&i, sizeof(iptr));
-
-    printf("c : %p\n%p (size:%zu)\n",
-           (void *)cptr, (void *)&c, sizeof(cptr));
-
-    printf("iptr2 : %p, %i\n",
-           (void *)iptr2, *iptr2);
+    printf("%i, %i, %i\n", i, *pi, *pc);
 
     return 0;
 }
